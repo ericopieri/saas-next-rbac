@@ -9,9 +9,11 @@
         "@saas/auth": "workspace:*",
         "fastify": "^4.27.0",
         "fastify-type-provider-zod": "^1.2.0",
+        "prisma": "^5.14.0",
         "zod": "^3.23.8"
     },
     "devDependencies": {
+        "@prisma/client": "^5.14.0",
         "@saas/eslint-config": "workspace: *",
         "@saas/prettier": "workspace: *",
         "@saas/tsconfig": "workspace: *",
