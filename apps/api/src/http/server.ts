@@ -30,7 +30,9 @@ app.register(fastifySwagger, {
   transform: jsonSchemaTransform,
 })
 
-app.register(fastifyJwt)
+app.register(fastifyJwt, {
+  secret: 'saas-my-secret',
+})
 
 app.register(fastifySwaggerUi, {
   routePrefix: '/docs',
