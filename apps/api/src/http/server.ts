@@ -10,8 +10,9 @@ import {
   ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
+import { authenticateWithPassword } from './routes/auth/authenticate-with-password'
 import { createAccount } from './routes/auth/create-account'
-import { authenticateWithPassword } from './routes/auth/lauthenticate-with-password'
+import fetchProfile from './routes/auth/fetch-profile'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -42,6 +43,7 @@ app.register(fastifyCors)
 
 app.register(createAccount)
 app.register(authenticateWithPassword)
+app.register(fetchProfile)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP server is running! 🚀')
