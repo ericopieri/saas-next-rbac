@@ -27,11 +27,20 @@ app.setValidatorCompiler(validatorCompiler)
 app.register(fastifySwagger, {
   openapi: {
     info: {
-      title: 'NextJS SaaS',
-      description: 'Full-Stack SaaS app with multi-tenant & RBAC.',
+      title: 'Next.js SaaS',
+      description: 'Full-stack SaaS with multi-tenant & RBAC.',
       version: '1.0.0',
     },
     servers: [],
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
+    },
   },
   transform: jsonSchemaTransform,
 })
