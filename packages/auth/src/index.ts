@@ -14,6 +14,8 @@ import { organizationSubject } from './subjects/organization'
 import { projectSubject } from './subjects/project'
 import { userSubject } from './subjects/user'
 
+export * from './roles'
+
 const appAbilitiesSchema = z.union([
   userSubject,
   organizationSubject,
