@@ -14,14 +14,14 @@ export const permissions: Record<RoleType, PermissionByRole> = {
     can('manage', 'all')
     cannot(['transfer_ornership', 'update'], 'Organization')
     can(['transfer_ornership', 'update'], 'Organization', {
-      ownerID: { $eq: user.id },
+      ownerId: { $eq: user.id },
     })
   },
   MEMBER(user, { can }) {
     can('get', 'User')
     can(['create', 'get'], 'Project')
     can(['update', 'delete'], 'Project', {
-      ownerID: {
+      ownerId: {
         $eq: user.id,
       },
     })
