@@ -17,7 +17,7 @@ export async function shutdownProject(app: FastifyInstance) {
       '/organizations/:orgSlug/projects/:projectId',
       {
         schema: {
-          tag: ['project'],
+          tags: ['project'],
           summary: 'Delete a Project inside a Organization',
           params: z.object({
             slug: z.string(),
