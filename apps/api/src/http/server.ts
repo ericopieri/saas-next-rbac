@@ -27,6 +27,7 @@ import { transferOrganizationOwnership } from './routes/orgs/transfer-organizati
 import { updateOrganization } from './routes/orgs/update-organization'
 import { createProject } from './routes/projects/create-project'
 import { getProject } from './routes/projects/get-project'
+import { shutdownProject } from './routes/projects/shutdown-project'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -81,6 +82,7 @@ app.register(transferOrganizationOwnership)
 
 app.register(createProject)
 app.register(getProject)
+app.register(shutdownProject)
 
 app.setErrorHandler(errorHandler)
 
