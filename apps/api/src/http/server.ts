@@ -29,6 +29,7 @@ import { createProject } from './routes/projects/create-project'
 import { getProject } from './routes/projects/get-project'
 import { getProjects } from './routes/projects/get-projects'
 import { shutdownProject } from './routes/projects/shutdown-project'
+import { updateProject } from './routes/projects/update-project'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -85,6 +86,7 @@ app.register(createProject)
 app.register(getProject)
 app.register(shutdownProject)
 app.register(getProjects)
+app.register(updateProject)
 
 app.setErrorHandler(errorHandler)
 
