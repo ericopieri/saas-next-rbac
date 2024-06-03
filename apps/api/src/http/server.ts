@@ -19,6 +19,7 @@ import fetchProfile from './routes/auth/fetch-profile'
 import { requestPasswordRecover } from './routes/auth/request-password-recover'
 import { resetPassword } from './routes/auth/reset-password'
 import { getOrganizationMembers } from './routes/member/get-organization-members'
+import { removeMember } from './routes/member/remove-member'
 import { updateMember } from './routes/member/update-member'
 import { createOrganization } from './routes/orgs/create-organization'
 import { getMembership } from './routes/orgs/get-membership'
@@ -92,6 +93,7 @@ app.register(updateProject)
 
 app.register(getOrganizationMembers)
 app.register(updateMember)
+app.register(removeMember)
 
 app.setErrorHandler(errorHandler)
 
